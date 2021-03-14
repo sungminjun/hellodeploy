@@ -76,10 +76,10 @@ else
 fi
 
 # swap nginx conf
-if [[ x"${CURRENT}" == x"${BLUE}" ]]; then
-	rm /etc/nginx/nginx.conf && ln -s /etc/nginx/nginx.conf.8082 /etc/nginx/nginx.conf
+if [[ ${CURRENT_PORT} -eq ${BLUE} ]]; then
+	rm /etc/nginx/nginx.conf && ln -s /etc/nginx/nginx.conf.8082 /etc/nginx/nginx.conf && echo set 8082 nginx.conf
 else
-	rm /etc/nginx/nginx.conf && ln -s /etc/nginx/nginx.conf.8081 /etc/nginx/nginx.conf
+	rm /etc/nginx/nginx.conf && ln -s /etc/nginx/nginx.conf.8081 /etc/nginx/nginx.conf && echo set 8081 nginx.conf
 fi
 
 # reload nginx
