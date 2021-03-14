@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Hello {
 
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "1.1";
 	public static final int DEFAULT_WIDTH = 80;
 	public static final String DEFAULT_FILLER = "=";
 	ArrayList<String> menu = new ArrayList<String>();
