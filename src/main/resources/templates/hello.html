@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<h2>default values</h2>
+	<div>
+		<div th:each="hello : ${hellos}" >
+			<p th:text=${hello.id} /><p th:text=${hello.text} />
+		</div>
+	</div>
+	<hr>
+	<h2>GET</h2>
+	<hr>
+	<h2>POST</h2>
+		<form action="#" th:action="@{/hello}" th:object="${hello}" method="post">
+		    <label for="text">Email</label>
+		    <input type="text" th:field="*{text}">
+		    <input type="submit" value="go">   
+		</form>
+
+	<hr>
+	<h2>PATCH</h2>
+	<hr>
+	<h2>DELETE</h2>
+	
+</body>
+</html>
